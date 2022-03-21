@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ILRI.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page">
+            <div class="header">
+                <div class="title">
+                    <h1> ILRI-ET Logistics Follow-Up</h1>
+                </div>
+            
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+                </div>
+                <div class="clear hideskiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem Navigateurl="~/Default.aspx" Text="Home"/>
+                            <asp:MenuItem  Text="About" >
+                                <asp:MenuItem NavigateUrl="~/About.aspx" Text="Who We Are" Value="Who We are"></asp:MenuItem>
+                            </asp:MenuItem>
+                           
+                            <asp:MenuItem Navigateurl="~/Gaallery.aspx" Text="Gallery" Value="Gallery"/>
+                           
+                            <asp:MenuItem NavigateUrl="~/Contact.aspx" Text="Contact" Value="Contact"></asp:MenuItem>
+                           
+                        </Items>
+                    </asp:Menu>
+                </div>
+                </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                    </div>
+            <div class="clear">
+
+            </div>
+                
+            
+            
+            
+
+            
+        </div>
+        <div class="footer" style="background-color:#4b6c9e; margin-top:10px; margin-bottom:0px; font-weight:bold">
+            <marquee onmouseover="stop();" onmouseout="start();" scrollamount="2" scrolldelay="30" direction=""> &copy; 2021
+                &nbsp; &nbsp; &nbsp; Develpoed by <a href="mailto:veronicamekuria@gmail.com">Mail</a> &nbsp; &nbsp;
+                <asp:Label ID="lblMessage" runat="server" ForeColor="#800000"></asp:Label></div>
+    </form>
+</body>
+</html>
