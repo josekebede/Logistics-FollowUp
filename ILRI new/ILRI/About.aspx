@@ -67,7 +67,7 @@
   <td style="width:105px"> 
       Telephone:  </td>
   <td>
-     +251 (91) 10543557  </td>
+     +251 (91) 0543557  </td>
 </tr>
 </table>
 <td class="style28" style="border-style:ridge">

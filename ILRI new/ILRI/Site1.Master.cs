@@ -11,7 +11,7 @@ namespace ILRI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblMessage.Text = "Life goes fast, The year don't last, Live for the future and foreget the past";
+            lblMessage.Text = "Life goes fast, The year don't last, Live for the future and forget the past";
         }
     }
 }
